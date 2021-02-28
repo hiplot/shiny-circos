@@ -659,7 +659,7 @@ plotfig <- function(input, output, trackindx, data.L, data.L1, data.L2, data.C, 
           }else{
             tkborder <- NA
           }
-          columns <- c(1:ncol(data.TT))[-c(1:3)]	
+          columns <- c(seq_len(ncol(data.TT)))[-c(1:3)]	
           if(!is.null(data.NN) && ncol(data.NN)==4 && labeltext[i]==1){
             takindx <- takindx+2
           }

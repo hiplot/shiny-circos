@@ -748,7 +748,7 @@ if(!is.null(data.T)){
       tkborder <- NA
       cat(paste("tkborder <- ",tkborder,sep=""),file="code.R",append=TRUE,sep="\n")																										
     }
-    columns <- c(1:ncol(data.TT))[-c(1:3)]				
+    columns <- c(seq_len(ncol(data.TT)))[-c(1:3)]				
     cat(paste("columns <- c(",paste(columns,collapse =","),")",sep=""),file="code.R",append=TRUE,sep="\n")																
     if(!is.null(data.NN) && ncol(data.NN)==4 && labeltext[i]==1){
       cat("takindx <- takindx+2",file="code.R",append=TRUE,sep="\n")																										
